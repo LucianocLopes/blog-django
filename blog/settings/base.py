@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'django_extensions',
     # my apps
     'accounts.apps.AccountsConfig',
+    'categorias.apps.CategoriasConfig',
+    'comentarios.apps.ComentariosConfig',
+    'posts.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [
