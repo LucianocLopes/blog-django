@@ -5,18 +5,27 @@
 │   ├── forms.py
 │   ├── __init__.py
 │   ├── migrations
-│   │   └── __init__.py
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-310.pyc
+│   │       └── __init__.cpython-310.pyc
 │   ├── models.py
 │   ├── __pycache__
+│   │   ├── admin.cpython-310.pyc
 │   │   ├── apps.cpython-310.pyc
-│   │   └── __init__.cpython-310.pyc
+│   │   ├── forms.cpython-310.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   └── models.cpython-310.pyc
 │   ├── tests.py
 │   └── views.py
 ├── blog
 │   ├── asgi.py
 │   ├── __init__.py
 │   ├── __pycache__
-│   │   └── __init__.cpython-310.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── urls.cpython-310.pyc
+│   │   └── wsgi.cpython-310.pyc
 │   ├── settings
 │   │   ├── base.py
 │   │   ├── __init__.py
@@ -33,4 +42,4 @@
 ├── requirements
 └── tree_project
 
-8 directories, 25 files
+9 directories, 33 files
