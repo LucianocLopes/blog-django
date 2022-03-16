@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # 3td apps
     'debug_toolbar',
     'django_extensions',
+    'django_summernote',
     # my apps
     'accounts.apps.AccountsConfig',
     'categorias.apps.CategoriasConfig',
@@ -173,3 +174,6 @@ else:
     EMAIL_HOST_USER = env('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
     RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
+
+# Django-Summernote
+X_FRAME_OPTIONS = 'SAMEORIGIN'

@@ -35,11 +35,63 @@
 │   │       └── __init__.cpython-310.pyc
 │   ├── urls.py
 │   └── wsgi.py
+├── categorias
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-310.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-310.pyc
+│   │   ├── apps.cpython-310.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   └── models.cpython-310.pyc
+│   ├── tests.py
+│   └── views.py
+├── comentarios
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-310.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-310.pyc
+│   │   ├── apps.cpython-310.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   └── models.cpython-310.pyc
+│   ├── tests.py
+│   └── views.py
 ├── contrib
 │   └── env_gen.py
 ├── liblist
 ├── manage.py
+├── posts
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-310.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-310.pyc
+│   │   ├── apps.cpython-310.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── models.cpython-310.pyc
+│   │   ├── urls.cpython-310.pyc
+│   │   └── views.cpython-310.pyc
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── projeto_blog.txt
 ├── requirements
 └── tree_project
 
-9 directories, 33 files
+21 directories, 73 files
