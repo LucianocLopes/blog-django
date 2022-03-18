@@ -1,22 +1,21 @@
-import environ
 from django.forms import ModelForm
 import requests
 from . import models
 
-env = environ.Env()
 
 class FormComentario(ModelForm):
-    
+
     def clean(self):
         raw_data = self.data
         recaptcha_reponse = raw_data.get('g-recaptcha-response')
         recaptcha_request = requests.post(
             'https://www.google.com/recaptcha/api/siteverify',
             data={
-                'secret': env('RECAPTCHA_SECRET_KEY'),
+                'secret': '6LfxZuweAAAAAHxKYtifG6wGWU5ttx3Y5HE7cIdj',
                 'response': recaptcha_reponse
             }
         )
+
         recaptcha_result = recaptcha_request.json()
         if not recaptcha_result.get('success'):
             self.add_error(
