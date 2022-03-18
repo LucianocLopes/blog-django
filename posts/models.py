@@ -42,7 +42,7 @@ class Post(models.Model):
         verbose_name=_('imagem'),
         upload_to='post_img/%Y/%m/%d',
         blank=True,
-        null = True,
+        null=True,
     )
     publicado_post = models.BooleanField(
         verbose_name=_('publicado'),

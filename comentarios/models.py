@@ -12,7 +12,7 @@ class Comentario(models.Model):
         max_length=255,
     )
     email_comentario = models.EmailField(
-        verbose_name=_('email'),
+        verbose_name=_('e-mail'),
     )
     comentario = models.TextField(
         verbose_name=_('comentario'),
@@ -20,7 +20,6 @@ class Comentario(models.Model):
     post_comentario = models.ForeignKey(
         Post,
         verbose_name=_('post'),
-        related_name='comentario_post',
         on_delete=models.CASCADE,
     )
     usuario_comentario = models.ForeignKey(

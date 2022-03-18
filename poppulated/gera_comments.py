@@ -1,6 +1,7 @@
 import csv
 from comentarios.models import Comentario
 from posts.models import Post
+from django.contrib.auth import get_user_model
 
 
 def csv_to_list(filename: str) -> list:
@@ -22,12 +23,14 @@ def save_data(data):
         _post = int(item.get('post'))
         post = Post.objects.filter(id=_post).first()
         postado = bool(item.get('postado'))
+        usuario = get_user_model().objects.first()
         obj = Comentario(
             nome_comentario=nome,
             email_comentario=email,
             comentario=comentario,
             post_comentario=post,
             publicado_comentario=postado,
+            usuario_comentario=usuario,
         )
         
         aux.append(obj)
