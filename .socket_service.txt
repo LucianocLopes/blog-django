@@ -46,10 +46,10 @@ sudo systemctl enable gunicorn.socket
 ##################################################
 
 # Checando
-sudo systemctl status gunicorn.socket
-sudo systemctl status gunicorn
-curl --unix-socket /run/gunicorn.sock localhost
-sudo systemctl status gunicorn
+sudo systemctl status gunicorn_blog.socket
+sudo systemctl status gunicorn_blog
+curl --unix-socket /run/gunicorn_blog.sock localhost
+sudo systemctl status gunicorn_blog
 ##################################################
 
 sudo nano /etc/nginx/sites-enabled/sitedjango
@@ -79,6 +79,5 @@ server {
 ##################################################
 
 sudo rm /etc/nginx/sites-enabled/default
-sudo systemctl restart nginx
-sudo systemctl restart gunicorn
+sudo systemctl restart nginx && sudo systemctl restart gunicorn
 ##################################################
