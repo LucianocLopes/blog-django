@@ -40,8 +40,10 @@
 │   ├── apps.py
 │   ├── __init__.py
 │   ├── migrations
+│   │   ├── 0001_initial.py
 │   │   ├── __init__.py
 │   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-310.pyc
 │   │       └── __init__.cpython-310.pyc
 │   ├── models.py
 │   ├── __pycache__
@@ -54,15 +56,25 @@
 ├── comentarios
 │   ├── admin.py
 │   ├── apps.py
+│   ├── forms.py
 │   ├── __init__.py
 │   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_alter_comentario_usuario_comentario.py
+│   │   ├── 0003_alter_comentario_post_comentario.py
+│   │   ├── 0004_alter_comentario_email_comentario.py
 │   │   ├── __init__.py
 │   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-310.pyc
+│   │       ├── 0002_alter_comentario_usuario_comentario.cpython-310.pyc
+│   │       ├── 0003_alter_comentario_post_comentario.cpython-310.pyc
+│   │       ├── 0004_alter_comentario_email_comentario.cpython-310.pyc
 │   │       └── __init__.cpython-310.pyc
 │   ├── models.py
 │   ├── __pycache__
 │   │   ├── admin.cpython-310.pyc
 │   │   ├── apps.cpython-310.pyc
+│   │   ├── forms.cpython-310.pyc
 │   │   ├── __init__.cpython-310.pyc
 │   │   └── models.cpython-310.pyc
 │   ├── tests.py
@@ -71,13 +83,56 @@
 │   └── env_gen.py
 ├── liblist
 ├── manage.py
+├── media
+│   ├── django-summernote
+│   │   └── 2022-03-16
+│   │       ├── 24f87265-30d6-46d6-bf09-8e149da80d8c.jpg
+│   │       ├── 27f569dc-641e-4580-ba94-44aeab9a4031.jpeg
+│   │       ├── 36f5f508-b5a2-4b66-a7a1-7500a6e4e270.jpg
+│   │       ├── 3b9ba1dc-5a7c-4502-9250-09f7f3d27db4.jpg
+│   │       ├── 3ec32de7-0969-4a69-93ae-6ad9f162c76b.jpg
+│   │       ├── 4f7f7d81-021b-40ba-84df-4875982a81b2.jpg
+│   │       ├── 6ddbd54f-e1b8-4dc3-8826-e3ad1efec7e0.jpg
+│   │       ├── a44556b3-9db5-463d-a7f9-f488b9ff1278.jpg
+│   │       ├── b4efde05-b6ba-48cd-8c6e-b660112489cb.jpg
+│   │       ├── c7dff653-ef76-406a-8c9f-2b2798a18999.jpg
+│   │       ├── d5730a49-9fad-4b31-bdc2-f782ff2e021b.jpg
+│   │       └── e990d551-9709-41c1-a7cd-3efa59d2649e.jpg
+│   └── post_img
+│       └── 2022
+│           └── 03
+│               └── 16
+│                   ├── chip_circuit_processor_140251_1280x720_exLzC6s.jpg
+│                   ├── chip_circuit_processor_140251_1280x720.jpg
+│                   ├── circuit_paths_chips_black_pin_26298_1280x720.jpg
+│                   ├── circuit_paths_chips_black_pin_26298_1280x720_ysjvx1F.jpg
+│                   ├── fQnjSbW.jpg
+│                   ├── keyboard_robot_bw_clone_lego_27558_1280x720.jpg
+│                   ├── keyboard_robot_bw_clone_lego_27558_1280x720_r1Ka4Q9.jpg
+│                   ├── linux_debian_brand_logo_spiral_93908_1280x720.jpg
+│                   ├── linux_debian_brand_logo_spiral_93908_1280x720_VOhiuG5.jpg
+│                   ├── linux_linux_mint_black_gnu_103855_1280x720.jpg
+│                   ├── linux_linux_mint_black_gnu_103855_1280x720_pTHXzOM.jpg
+│                   ├── linux_linux_mint_gnu_logo_texture_103848_1280x720.jpg
+│                   ├── linux_linux_mint_gnu_logo_texture_103848_1280x720_v7Qs9YT.jpg
+│                   ├── linux_system_hi-tech_73419_1280x720.jpg
+│                   ├── processor_cpu_upgrade_installation_chip_robot_5633_1280x720.jpg
+│                   ├── user.png
+│                   ├── windows_field_grass_operating_system_74340_1280x720.jpg
+│                   ├── windows_field_grass_operating_system_74340_1280x720_P3iMGxP.jpg
+│                   └── zenit_retro_camera_photos_map_107245_1280x720.jpg
+├── poppulated
+│   ├── comments.csv
+│   └── gera_comments.py
 ├── posts
 │   ├── admin.py
 │   ├── apps.py
 │   ├── __init__.py
 │   ├── migrations
+│   │   ├── 0001_initial.py
 │   │   ├── __init__.py
 │   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-310.pyc
 │   │       └── __init__.cpython-310.pyc
 │   ├── models.py
 │   ├── __pycache__
@@ -87,11 +142,354 @@
 │   │   ├── models.cpython-310.pyc
 │   │   ├── urls.cpython-310.pyc
 │   │   └── views.cpython-310.pyc
+│   ├── templates
+│   │   └── posts
+│   │       ├── index.html
+│   │       ├── post_busca.html
+│   │       ├── post_categoria.html
+│   │       └── post_detalhes.html
+│   ├── templatetags
+│   │   ├── __init__.py
+│   │   ├── lc_filters.py
+│   │   └── __pycache__
+│   │       ├── __init__.cpython-310.pyc
+│   │       └── lc_filters.cpython-310.pyc
 │   ├── tests.py
 │   ├── urls.py
 │   └── views.py
 ├── projeto_blog.txt
 ├── requirements
+├── static
+│   ├── admin
+│   │   ├── css
+│   │   │   ├── autocomplete.css
+│   │   │   ├── base.css
+│   │   │   ├── changelists.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── fonts.css
+│   │   │   ├── forms.css
+│   │   │   ├── login.css
+│   │   │   ├── nav_sidebar.css
+│   │   │   ├── responsive.css
+│   │   │   ├── responsive_rtl.css
+│   │   │   ├── rtl.css
+│   │   │   ├── vendor
+│   │   │   │   └── select2
+│   │   │   │       ├── LICENSE-SELECT2.md
+│   │   │   │       ├── select2.css
+│   │   │   │       └── select2.min.css
+│   │   │   └── widgets.css
+│   │   ├── fonts
+│   │   │   ├── LICENSE.txt
+│   │   │   ├── README.txt
+│   │   │   ├── Roboto-Bold-webfont.woff
+│   │   │   ├── Roboto-Light-webfont.woff
+│   │   │   └── Roboto-Regular-webfont.woff
+│   │   ├── img
+│   │   │   ├── calendar-icons.svg
+│   │   │   ├── gis
+│   │   │   │   ├── move_vertex_off.svg
+│   │   │   │   └── move_vertex_on.svg
+│   │   │   ├── icon-addlink.svg
+│   │   │   ├── icon-alert.svg
+│   │   │   ├── icon-calendar.svg
+│   │   │   ├── icon-changelink.svg
+│   │   │   ├── icon-clock.svg
+│   │   │   ├── icon-deletelink.svg
+│   │   │   ├── icon-no.svg
+│   │   │   ├── icon-unknown-alt.svg
+│   │   │   ├── icon-unknown.svg
+│   │   │   ├── icon-viewlink.svg
+│   │   │   ├── icon-yes.svg
+│   │   │   ├── inline-delete.svg
+│   │   │   ├── LICENSE
+│   │   │   ├── README.txt
+│   │   │   ├── search.svg
+│   │   │   ├── selector-icons.svg
+│   │   │   ├── sorting-icons.svg
+│   │   │   ├── tooltag-add.svg
+│   │   │   └── tooltag-arrowright.svg
+│   │   └── js
+│   │       ├── actions.js
+│   │       ├── admin
+│   │       │   ├── DateTimeShortcuts.js
+│   │       │   └── RelatedObjectLookups.js
+│   │       ├── autocomplete.js
+│   │       ├── calendar.js
+│   │       ├── cancel.js
+│   │       ├── change_form.js
+│   │       ├── collapse.js
+│   │       ├── core.js
+│   │       ├── inlines.js
+│   │       ├── jquery.init.js
+│   │       ├── nav_sidebar.js
+│   │       ├── popup_response.js
+│   │       ├── prepopulate_init.js
+│   │       ├── prepopulate.js
+│   │       ├── SelectBox.js
+│   │       ├── SelectFilter2.js
+│   │       ├── urlify.js
+│   │       └── vendor
+│   │           ├── jquery
+│   │           │   ├── jquery.js
+│   │           │   ├── jquery.min.js
+│   │           │   └── LICENSE.txt
+│   │           ├── select2
+│   │           │   ├── i18n
+│   │           │   │   ├── af.js
+│   │           │   │   ├── ar.js
+│   │           │   │   ├── az.js
+│   │           │   │   ├── bg.js
+│   │           │   │   ├── bn.js
+│   │           │   │   ├── bs.js
+│   │           │   │   ├── ca.js
+│   │           │   │   ├── cs.js
+│   │           │   │   ├── da.js
+│   │           │   │   ├── de.js
+│   │           │   │   ├── dsb.js
+│   │           │   │   ├── el.js
+│   │           │   │   ├── en.js
+│   │           │   │   ├── es.js
+│   │           │   │   ├── et.js
+│   │           │   │   ├── eu.js
+│   │           │   │   ├── fa.js
+│   │           │   │   ├── fi.js
+│   │           │   │   ├── fr.js
+│   │           │   │   ├── gl.js
+│   │           │   │   ├── he.js
+│   │           │   │   ├── hi.js
+│   │           │   │   ├── hr.js
+│   │           │   │   ├── hsb.js
+│   │           │   │   ├── hu.js
+│   │           │   │   ├── hy.js
+│   │           │   │   ├── id.js
+│   │           │   │   ├── is.js
+│   │           │   │   ├── it.js
+│   │           │   │   ├── ja.js
+│   │           │   │   ├── ka.js
+│   │           │   │   ├── km.js
+│   │           │   │   ├── ko.js
+│   │           │   │   ├── lt.js
+│   │           │   │   ├── lv.js
+│   │           │   │   ├── mk.js
+│   │           │   │   ├── ms.js
+│   │           │   │   ├── nb.js
+│   │           │   │   ├── ne.js
+│   │           │   │   ├── nl.js
+│   │           │   │   ├── pl.js
+│   │           │   │   ├── ps.js
+│   │           │   │   ├── pt-BR.js
+│   │           │   │   ├── pt.js
+│   │           │   │   ├── ro.js
+│   │           │   │   ├── ru.js
+│   │           │   │   ├── sk.js
+│   │           │   │   ├── sl.js
+│   │           │   │   ├── sq.js
+│   │           │   │   ├── sr-Cyrl.js
+│   │           │   │   ├── sr.js
+│   │           │   │   ├── sv.js
+│   │           │   │   ├── th.js
+│   │           │   │   ├── tk.js
+│   │           │   │   ├── tr.js
+│   │           │   │   ├── uk.js
+│   │           │   │   ├── vi.js
+│   │           │   │   ├── zh-CN.js
+│   │           │   │   └── zh-TW.js
+│   │           │   ├── LICENSE.md
+│   │           │   ├── select2.full.js
+│   │           │   └── select2.full.min.js
+│   │           └── xregexp
+│   │               ├── LICENSE.txt
+│   │               ├── xregexp.js
+│   │               └── xregexp.min.js
+│   ├── debug_toolbar
+│   │   ├── css
+│   │   │   ├── print.css
+│   │   │   └── toolbar.css
+│   │   └── js
+│   │       ├── history.js
+│   │       ├── redirect.js
+│   │       ├── timer.js
+│   │       ├── toolbar.js
+│   │       └── utils.js
+│   ├── django_extensions
+│   │   ├── css
+│   │   │   └── jquery.autocomplete.css
+│   │   ├── img
+│   │   │   └── indicator.gif
+│   │   └── js
+│   │       ├── jquery.ajaxQueue.js
+│   │       ├── jquery.autocomplete.js
+│   │       └── jquery.bgiframe.js
+│   ├── img
+│   │   ├── chip_circuit_processor_140251_1280x720.jpg
+│   │   ├── circuit_paths_chips_black_pin_26298_1280x720.jpg
+│   │   ├── fQnjSbW.jpg
+│   │   ├── keyboard_robot_bw_clone_lego_27558_1280x720.jpg
+│   │   ├── linux_debian_brand_logo_spiral_93908_1280x720.jpg
+│   │   ├── linux_linux_mint_black_gnu_103855_1280x720.jpg
+│   │   ├── linux_linux_mint_gnu_logo_texture_103848_1280x720.jpg
+│   │   ├── linux_system_hi-tech_73419_1280x720.jpg
+│   │   ├── processor_cpu_upgrade_installation_chip_robot_5633_1280x720.jpg
+│   │   ├── windows_field_grass_operating_system_74340_1280x720.jpg
+│   │   └── zenit_retro_camera_photos_map_107245_1280x720.jpg
+│   ├── summernote
+│   │   ├── django_summernote.css
+│   │   ├── font
+│   │   │   ├── summernote.eot
+│   │   │   ├── summernote.hash
+│   │   │   ├── summernote.ttf
+│   │   │   ├── summernote.woff
+│   │   │   └── summernote.woff2
+│   │   ├── jquery.fileupload.js
+│   │   ├── jquery.iframe-transport.js
+│   │   ├── jquery.ui.widget.js
+│   │   ├── lang
+│   │   │   ├── summernote-ar-AR.min.js
+│   │   │   ├── summernote-az-AZ.min.js
+│   │   │   ├── summernote-bg-BG.min.js
+│   │   │   ├── summernote-bn-BD.min.js
+│   │   │   ├── summernote-ca-ES.min.js
+│   │   │   ├── summernote-cs-CZ.min.js
+│   │   │   ├── summernote-da-DK.min.js
+│   │   │   ├── summernote-de-CH.min.js
+│   │   │   ├── summernote-de-DE.min.js
+│   │   │   ├── summernote-el-GR.min.js
+│   │   │   ├── summernote-en-US.min.js
+│   │   │   ├── summernote-es-ES.min.js
+│   │   │   ├── summernote-es-EU.min.js
+│   │   │   ├── summernote-fa-IR.min.js
+│   │   │   ├── summernote-fi-FI.min.js
+│   │   │   ├── summernote-fr-FR.min.js
+│   │   │   ├── summernote-gl-ES.min.js
+│   │   │   ├── summernote-he-IL.min.js
+│   │   │   ├── summernote-hr-HR.min.js
+│   │   │   ├── summernote-hu-HU.min.js
+│   │   │   ├── summernote-id-ID.min.js
+│   │   │   ├── summernote-it-IT.min.js
+│   │   │   ├── summernote-ja-JP.min.js
+│   │   │   ├── summernote-ko-KR.min.js
+│   │   │   ├── summernote-lt-LT.min.js
+│   │   │   ├── summernote-lt-LV.min.js
+│   │   │   ├── summernote-mn-MN.min.js
+│   │   │   ├── summernote-nb-NO.min.js
+│   │   │   ├── summernote-nl-NL.min.js
+│   │   │   ├── summernote-pl-PL.min.js
+│   │   │   ├── summernote-pt-BR.min.js
+│   │   │   ├── summernote-pt-PT.min.js
+│   │   │   ├── summernote-ro-RO.min.js
+│   │   │   ├── summernote-ru-RU.min.js
+│   │   │   ├── summernote-sk-SK.min.js
+│   │   │   ├── summernote-sl-SI.min.js
+│   │   │   ├── summernote-sr-RS-Latin.min.js
+│   │   │   ├── summernote-sr-RS.min.js
+│   │   │   ├── summernote-sv-SE.min.js
+│   │   │   ├── summernote-ta-IN.min.js
+│   │   │   ├── summernote-th-TH.min.js
+│   │   │   ├── summernote-tr-TR.min.js
+│   │   │   ├── summernote-uk-UA.min.js
+│   │   │   ├── summernote-uz-UZ.min.js
+│   │   │   ├── summernote-vi-VN.min.js
+│   │   │   ├── summernote-zh-CN.min.js
+│   │   │   └── summernote-zh-TW.min.js
+│   │   ├── ResizeSensor.js
+│   │   ├── SOURCE
+│   │   ├── summernote-bs4.min.css
+│   │   ├── summernote-bs4.min.js
+│   │   ├── summernote-bs5.min.css
+│   │   ├── summernote-bs5.min.js
+│   │   ├── summernote-lite.min.css
+│   │   ├── summernote-lite.min.js
+│   │   ├── summernote.min.css
+│   │   ├── summernote.min.js
+│   │   └── summernote.png
+│   └── vendor
+│       ├── bootstrap
+│       │   ├── css
+│       │   │   ├── bootstrap.css
+│       │   │   ├── bootstrap.css.map
+│       │   │   ├── bootstrap-grid.css
+│       │   │   ├── bootstrap-grid.css.map
+│       │   │   ├── bootstrap-grid.min.css
+│       │   │   ├── bootstrap-grid.min.css.map
+│       │   │   ├── bootstrap.min.css
+│       │   │   ├── bootstrap.min.css.map
+│       │   │   ├── bootstrap-reboot.css
+│       │   │   ├── bootstrap-reboot.css.map
+│       │   │   ├── bootstrap-reboot.min.css
+│       │   │   ├── bootstrap-reboot.min.css.map
+│       │   │   └── theme_1564087106285.css
+│       │   └── js
+│       │       ├── bootstrap.bundle.js
+│       │       ├── bootstrap.bundle.js.map
+│       │       ├── bootstrap.bundle.min.js
+│       │       ├── bootstrap.bundle.min.js.map
+│       │       ├── bootstrap.js
+│       │       ├── bootstrap.js.map
+│       │       ├── bootstrap.min.js
+│       │       └── bootstrap.min.js.map
+│       └── jquery
+│           ├── jquery.js
+│           ├── jquery.min.js
+│           ├── jquery.min.map
+│           ├── jquery.slim.js
+│           ├── jquery.slim.min.js
+│           └── jquery.slim.min.map
+├── templates
+│   ├── base.html
+│   ├── parciais
+│   │   ├── _footer.html
+│   │   ├── _head.html
+│   │   ├── _messages.html
+│   │   ├── _nav.html
+│   │   └── _pagination.html
+│   └── static
+│       ├── css
+│       ├── img
+│       │   ├── chip_circuit_processor_140251_1280x720.jpg
+│       │   ├── circuit_paths_chips_black_pin_26298_1280x720.jpg
+│       │   ├── fQnjSbW.jpg
+│       │   ├── keyboard_robot_bw_clone_lego_27558_1280x720.jpg
+│       │   ├── linux_debian_brand_logo_spiral_93908_1280x720.jpg
+│       │   ├── linux_linux_mint_black_gnu_103855_1280x720.jpg
+│       │   ├── linux_linux_mint_gnu_logo_texture_103848_1280x720.jpg
+│       │   ├── linux_system_hi-tech_73419_1280x720.jpg
+│       │   ├── processor_cpu_upgrade_installation_chip_robot_5633_1280x720.jpg
+│       │   ├── windows_field_grass_operating_system_74340_1280x720.jpg
+│       │   └── zenit_retro_camera_photos_map_107245_1280x720.jpg
+│       ├── js
+│       └── vendor
+│           ├── bootstrap
+│           │   ├── css
+│           │   │   ├── bootstrap.css
+│           │   │   ├── bootstrap.css.map
+│           │   │   ├── bootstrap-grid.css
+│           │   │   ├── bootstrap-grid.css.map
+│           │   │   ├── bootstrap-grid.min.css
+│           │   │   ├── bootstrap-grid.min.css.map
+│           │   │   ├── bootstrap.min.css
+│           │   │   ├── bootstrap.min.css.map
+│           │   │   ├── bootstrap-reboot.css
+│           │   │   ├── bootstrap-reboot.css.map
+│           │   │   ├── bootstrap-reboot.min.css
+│           │   │   ├── bootstrap-reboot.min.css.map
+│           │   │   └── theme_1564087106285.css
+│           │   └── js
+│           │       ├── bootstrap.bundle.js
+│           │       ├── bootstrap.bundle.js.map
+│           │       ├── bootstrap.bundle.min.js
+│           │       ├── bootstrap.bundle.min.js.map
+│           │       ├── bootstrap.js
+│           │       ├── bootstrap.js.map
+│           │       ├── bootstrap.min.js
+│           │       └── bootstrap.min.js.map
+│           └── jquery
+│               ├── jquery.js
+│               ├── jquery.min.js
+│               ├── jquery.min.map
+│               ├── jquery.slim.js
+│               ├── jquery.slim.min.js
+│               └── jquery.slim.min.map
 └── tree_project
 
-21 directories, 73 files
+75 directories, 417 files
