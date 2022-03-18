@@ -21,9 +21,12 @@ psycopg2-binary      2.9.3
 psycopg2-pool        1.1
 pyparsing            3.0.7
 requests             2.27.1
+<<<<<<< HEAD
 setuptools           60.9.3
+=======
+setuptools           58.1.0
+>>>>>>> 6530ce2eb09b0347046e0d71d2c863f499e038b8
 six                  1.16.0
 sqlparse             0.4.2
 urllib3              1.26.9
 webencodings         0.5.1
-wheel                0.37.1
