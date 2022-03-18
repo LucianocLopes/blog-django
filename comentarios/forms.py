@@ -1,7 +1,9 @@
+import environ
 from django.forms import ModelForm
 import requests
 from . import models
 
+env = environ.Env()
 
 class FormComentario(ModelForm):
     
@@ -11,7 +13,7 @@ class FormComentario(ModelForm):
         recaptcha_request = requests.post(
             'https://www.google.com/recaptcha/api/siteverify',
             data={
-                'secret': '6LfxZuweAAAAAHxKYtifG6wGWU5ttx3Y5HE7cIdj',
+                'secret': env('RECAPTCHA_SECRET_KEY'),
                 'response': recaptcha_reponse
             }
         )

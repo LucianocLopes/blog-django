@@ -167,17 +167,17 @@ INTERNAL_IPS = [
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # EMAIL
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = env('EMAIL_HOST')
-    EMAIL_PORT = env.int('EMAIL_PORT')
-    EMAIL_USE_TSL = env.bool('EMAIL_USE_TSL')
-    EMAIL_USE_SSL = env.bool('EMAIL_USE_SSL')
-    EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-    RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
+#if DEBUG:
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#else:
+#    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#    EMAIL_HOST = env('EMAIL_HOST')
+#    EMAIL_PORT = env.int('EMAIL_PORT')
+#    EMAIL_USE_TSL = env.bool('EMAIL_USE_TSL')
+#    EMAIL_USE_SSL = env.bool('EMAIL_USE_SSL')
+#    EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+#    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+#    RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
 
 # Django-Summernote
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -194,8 +194,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # SECURITY
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
 
+# DJANGO_SETTINGS_MODULE
